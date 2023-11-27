@@ -1,0 +1,42 @@
+import { poppins } from '@src/util/font';
+import React, { ButtonHTMLAttributes } from 'react'
+import { cva, type VariantProps } from 'class-variance-authority';
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+  text:string;
+}
+
+const buttonVariants = cva(
+  'focus:outline-none  duration-150',
+  {
+    variants: {
+     variant: {
+      tint: 'bg-secondary-100 border-none text-white',
+      outlined: 'border-secondary-100 border bg-transparent text-primary-300',
+      default: 'border-none'
+     },
+     size: {
+      small: ['w-[140px] px-2 py-2 rounded-[30px]'],
+      medium: ['w-[200px] px-2 py-2 rounded-[30px]'],
+      fill: ['w-full px-2 rounded-[30px] py-2']
+     },
+     spacing: {
+      top: "mt-4",
+      regular: "mt-2"
+     }
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'fill',
+      spacing: "regular"
+    }
+  }
+)
+
+
+
+export const Button = ({text, variant, spacing, size, ...props}: ButtonProps) => {
+  return (
+    <button className={buttonVariants({ variant, spacing, size})} {...props}>{text}</button>
+  )
+}

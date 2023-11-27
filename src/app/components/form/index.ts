@@ -1,0 +1,1 @@
+export {HeroContact} from './heroContact'
