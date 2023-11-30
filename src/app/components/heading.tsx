@@ -10,7 +10,7 @@ type IProps = {
 export const Heading = ({title1,title2, content}: IProps) => {
   return (
     <div className='flex'>
-            <div className='w-[2px] h-[30px] bg-primary-200'>
+            <div className='w-[2px] h-[22px] mt-2 bg-primary-200'>
             </div>
             <div className='flex flex-col ml-4'>
                 <h2 className={`text-primary-200 text-[24px] ${poppins.className}`}>{title1} <span className='text-gray-600'>{title2}</span> </h2>

@@ -12,13 +12,14 @@ const buttonVariants = cva(
     variants: {
      variant: {
       tint: 'bg-secondary-100 border-none text-white',
-      outlined: 'border-secondary-100 border bg-transparent text-primary-300',
+      outlined: 'border-secondary-100 border bg-transparent text-gray-600',
+      outlined_text: 'border-secondary-100 border bg-transparent text-secondary-100',
       default: 'border-none'
      },
      size: {
-      small: ['w-[140px] px-2 py-2 rounded-[30px]'],
-      medium: ['w-[200px] px-2 py-2 rounded-[30px]'],
-      fill: ['w-full px-2 rounded-[30px] py-2']
+      small: ['w-[140px] px-2 py-3 text-[13px] rounded-[30px]'],
+      medium: ['w-[200px] px-2 py-3 text-[13px] rounded-[30px]'],
+      fill: ['w-full px-2 rounded-[30px] text-[13px] py-3']
      },
      spacing: {
       top: "mt-4",

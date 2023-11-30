@@ -10,7 +10,7 @@ export const BottomNav = () => {
     <nav className='relative z-20'>
          <div className='w-full  bg-primary-200 h-[180px]'>
         <div className='flex centered-main-container pt-5 mb-4  items-center justify-between w-full'>
-            <PrimaryLogo src={images.primaryLogo.src} width={70} height={70} />
+            <PrimaryLogo src={images.primaryLogo.src} width={110} height={110} />
             <div className='flex flex-col items-end'>
             <div className='flex items-center gap-x-1 py-2'>
                 {webIcons.timer}
@@ -25,8 +25,8 @@ export const BottomNav = () => {
     </div>
     <div className='centered-main-container left-[13%]  absolute w-full top-[145px] h-[80px] bg-white shadow-sm flex items-center gap-x-4 rounded-[6px] px-10 py-4'>
       <LinkWrap href='#' title='Services'/>
-      <LinkWrap href='#' title='Our Team'/>
-      <LinkWrap href='#' title='Departments'/>
+      <LinkWrap href='/team' title='Our Team'/>
+      <LinkWrap href='/department' title='Departments'/>
       <LinkWrap href='#' title='FAQ'/>
       <LinkWrap href='#' title='Contact Us'/>
 

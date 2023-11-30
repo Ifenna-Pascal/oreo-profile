@@ -13,6 +13,7 @@ const config: Config = {
       },
       colors: {
         primary: {
+          50: '#c6eaec',
           100: '#f96332',
           200: '#00cfd1',
           300: '#263238',
@@ -20,7 +21,9 @@ const config: Config = {
         },
         secondary: {
           // orange color
-          100: '#fc7545'
+          50: '#f2a687',
+          100: '#fc7545',
+          200: '#a890d3'
         },
         gray: {
           100: '#dfe0e2'

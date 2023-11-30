@@ -1,3 +1,5 @@
 export {Hero } from './landingPage/hero'
 export {AboutUs } from './landingPage/aboutUs'
 export {BestServices} from './landingPage/bestServices'
+export { OurTeam } from './landingPage/ourTeam'
+export {Choice} from './landingPage/choice'

@@ -9,6 +9,6 @@ type link = {
 
 export const LinkWrap = ({href, title}: link) => {
   return (
-    <Link href={href} className={`font-poppins text-[16px] mr-4 text-gray-900 ${poppins.className}`}> {title} </Link>
+    <Link href={href} className={`font-poppins text-[16px] focus:outline-none mr-4 text-gray-900 ${poppins.className}`}> {title} </Link>
    )
 }

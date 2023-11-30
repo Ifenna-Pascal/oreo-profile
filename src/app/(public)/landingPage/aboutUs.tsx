@@ -21,7 +21,7 @@ export const AboutUs = () => {
                 <p className={`text-[14px] font-[400] py-3 tracking-[0.4px] font-300 text-gray-600  ${poppins.className} `}>
                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
                 </p>
-                <Button text='View More' spacing={'top'} variant={'outlined'} size={'medium'} />
+                <Button text='View More' spacing={'top'} variant={'outlined'} size={'small'} />
 
                 </div>
             </div>
