@@ -72,7 +72,7 @@ const Contact = () => {
         <div className='flex py-4 items-center flex-wrap gap-x-6'>
             {
               [images.support1, images.support2, images.support1, images.support2].map((image, index) => (
-                <Image src={image.src} alt='partners-logo' width={220} height={150} className='w-[220px] h-[150px]'/>
+                <Image src={image.src}  key={index} alt='partners-logo' width={220} height={150} className='w-[220px] h-[150px]'/>
               ))
             }
         </div>
