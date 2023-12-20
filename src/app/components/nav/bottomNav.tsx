@@ -24,11 +24,11 @@ export const BottomNav = () => {
         </div>
     </div>
     <div className='centered-main-container left-[13%]  absolute w-full top-[145px] h-[80px] bg-white shadow-sm flex items-center gap-x-4 rounded-[6px] px-10 py-4'>
-      <LinkWrap href='#' title='Services'/>
+      <LinkWrap href='/about' title='Services'/>
       <LinkWrap href='/team' title='Our Team'/>
       <LinkWrap href='/department' title='Departments'/>
-      <LinkWrap href='#' title='FAQ'/>
-      <LinkWrap href='#' title='Contact Us'/>
+      <LinkWrap href='/faq' title='FAQ'/>
+      <LinkWrap href='/contact' title='Contact Us'/>
 
     </div>
     </nav>

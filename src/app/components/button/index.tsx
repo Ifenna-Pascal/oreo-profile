@@ -17,7 +17,8 @@ const buttonVariants = cva(
       default: 'border-none'
      },
      size: {
-      small: ['w-[140px] px-2 py-3 text-[13px] rounded-[30px]'],
+      xs: ['w-[130px] px-2 py-2 text-[11px] rounded-[30px]'],
+      small: ['w-[140px] px-2 py-2 text-[13px] rounded-[30px]'],
       medium: ['w-[200px] px-2 py-3 text-[13px] rounded-[30px]'],
       fill: ['w-full px-2 rounded-[30px] text-[13px] py-3']
      },

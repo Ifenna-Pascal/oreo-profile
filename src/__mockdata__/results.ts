@@ -53,3 +53,32 @@ export const teams = [
     },
    
 ]
+
+export const depts = [
+    {
+        img: images.dept1,
+        name: 'Aba Eke',
+        position: 'Doctor 1'   
+    },
+    {
+        img: images.dept2,
+        name: 'Aba Eke',
+        position: 'Doctor 1'   
+    },
+    {
+        img: images.dept3,
+        name: 'Aba Eke',
+        position: 'Doctor 1'   
+    },
+    {
+        img: images.dept4,
+        name: 'Aba Eke',
+        position: 'Doctor 1'   
+    },
+    {
+        img: images.dept5,
+        name: 'Aba Eke',
+        position: 'Doctor 1'   
+    },
+   
+]

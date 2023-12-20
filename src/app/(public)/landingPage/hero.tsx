@@ -5,7 +5,7 @@ import { Button, HeroContact } from '../../components'
 export  function Hero() {
   return (
     <div className='relative mb-12'>
-        <div className='min-h-[500px] relative flex items-center flex-col justify-center  bg-gray-200'>
+        <div className='min-h-[480px] relative flex items-center flex-col justify-center hero-bg'>
         <div className='centered-main-container w-full '>
             <div className='flex flex-col '>
                 <h1 className={`text-[32px] font-[400] tracking-[0.4px] font-300 text-primary-300  ${poppins.className} `}>Welcome to</h1>

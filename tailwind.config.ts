@@ -26,12 +26,13 @@ const config: Config = {
           200: '#a890d3'
         },
         gray: {
-          100: '#dfe0e2'
+          100: '#dfe0e2',
+          200: '#f5f5f5'
         }
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero_bg': 'url("/src/assets/images/hero.jpg")',
+        'hero_bg': 'url("/src/assets/images/banner-service.jpg")',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },

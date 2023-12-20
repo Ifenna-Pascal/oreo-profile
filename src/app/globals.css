@@ -21,6 +21,7 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+
 @layer components {
   .main-container {
     max-width: 900px;
@@ -31,7 +32,54 @@ body {
     margin: 0 auto;
   }
 
+  .about-bg {
+    background-image: url('../assets//images/banner-service.jpg');
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .dept-bg {
+    background-image: url('../assets//images/banner-department.jpg');
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contact-bg {
+    background-image: url('../assets//images/banner-contactus.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .team-bg {
+    background-image: url('../assets//images/banner-doctors.jpg');
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-bg {
+    background-image: url('../assets//images/bg-hero.jpg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .faq-bg {
+    background-image: url('../assets//images/banner-blog.jpg');
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
+
   .small-text {
     @apply fontpoppins text-black text-[14px] tracking-[0.3px]
   }
+
 }
