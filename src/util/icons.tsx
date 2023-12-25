@@ -1,4 +1,4 @@
-import { Archive, Call, Clock, Facebook, Google, Heart, Instagram, Like1, Location, User } from "iconsax-react";
+import { Archive, ArrowRight2, Call, Clock, Facebook, Google, HambergerMenu, Heart, Instagram, Like1, Location, User } from "iconsax-react";
 
 const webIcons = {
     email: <Archive size="16" color="#000000"/>,
@@ -12,7 +12,11 @@ const webIcons = {
     like: <Like1 size="44" color="#ffffff" variant="Bold"/>,
     facebook: <Facebook variant="Bold" size="17" color="#fff" />,
     instagram: <Instagram variant="Bold" size="17" color="#fff" />,
-    gmail: <Google variant="Bold" size="17" color="#fff"/>
+    gmail: <Google variant="Bold" size="17" color="#fff"/>,
+    menuIcon: <HambergerMenu size="32" color="#555555"/>,
+    rightArrow: <ArrowRight2 size="13"  color="#555555"/>,
+    venue: <Location size="17" color="#555555"  variant="Bold"/>,
+    
 }
 
 export default webIcons

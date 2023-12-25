@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif' ]
+        poppins: ["var(--font-poppins`)"],
       },
       colors: {
         primary: {

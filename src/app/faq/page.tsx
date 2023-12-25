@@ -6,7 +6,7 @@ const Faqs = () => {
   return (
     <div>
         <HeroHeader header1='Oreo' header2='FAQs' image='faq-bg' />
-        <div className='centered-main-container py-16'>
+        <div className='px-5 md:px-0 centered-main-container py-16'>
         <Heading title1='Oreo' title2='Faqs' content='Quick Description text here...' />
         <div className='py-3'>
             {[1,2,3,4].map((question, key) => (

@@ -12,7 +12,7 @@ type IProps = {
 
 export const ServiceCard = ({ title, content, img, href }: IProps) => {
   return (
-    <div className='flex flex-col mb-8'>
+    <div className='flex flex-col items-center justify-center md:items-start md:justify-start mb-8'>
         <div className='mb-7 relative '>
         {/* <div className='h-[50px] w-[50px] absolute left-2 rounded-[24px] bg-primary-50 bg-blend-screen '></div> */}
         <Image src={img} alt="service_img" width={60} height={60}  className='bg-blend-lighten' />

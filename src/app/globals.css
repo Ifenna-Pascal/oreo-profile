@@ -30,6 +30,10 @@ body {
   .centered-main-container {
     max-width: 1140px;
     margin: 0 auto;
+ /* Small Devices, Tablets */
+ /* @media only screen and (min-width : 768px) {
+    max-width: 900px;
+ }   */
   }
 
   .about-bg {
@@ -62,9 +66,14 @@ body {
 
   .hero-bg {
     background-image: url('../assets//images/bg-hero.jpg');
-    background-position: top right;
+    /* background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../assets//images/bg-hero.jpg'); */
+    background-position: center left;
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (max-width : 458px) {
+      background-position: left;
+      
+     }  
   }
 
 
@@ -73,6 +82,8 @@ body {
     background-position: cover;
     background-repeat: no-repeat;
     background-size: cover;
+
+  
   }
 
 

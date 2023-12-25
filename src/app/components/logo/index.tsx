@@ -9,7 +9,7 @@ type IProps = {
 }
 export const PrimaryLogo = ({width, src, height}: IProps) => {
   return (
-    <Link href={"/"} className={`flex items-center justify-center w-[${width}px]`}>
+    <Link href={"/"} className={`flex items-center -mt-5 md:mt-0 justify-center w-[120px] md:w-[${width}px]`}>
         <Image alt='logo-image' className='w-full rounded-full' width={width} height={height}  src={src} />
     </Link>
   )

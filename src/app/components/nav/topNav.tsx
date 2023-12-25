@@ -4,9 +4,9 @@ import React from 'react'
 
 export const TopNav = () => {
   return (
-    <div className='w-full z-20 centered-main-container py-6 flex items-center justify-between'>
+    <div className='w-full z-20 lg:px-0 md:px-12 px-8  lg:centered-main-container py-7 flex items-center justify-between'>
         <div className='flex items-center'>
-            <div className='flex items-center gap-x-2 mr-8'>
+            <div className='flex items-center gap-x-2 mr-4 md:mr-8'>
                 {webIcons.email}
                 <span className={`${poppins.className} text-black text-[14px] tracking-[0.3px]`}>info@example.com</span>
             </div>
