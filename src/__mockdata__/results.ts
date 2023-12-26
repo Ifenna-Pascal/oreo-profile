@@ -5,22 +5,22 @@ import webIcons from "@src/util/icons";
 export const results = [
     {
         icon: webIcons.user,
-        value: "652",
+        value: 652,
         text: "Happy Clients",
     },
     {
         icon: webIcons.heart,
-        value: "700",
+        value: 700,
         text: "Happy Clients",
     },
     {
         icon: webIcons.like,
-        value: "890",
+        value: 890,
         text: "Happy Clients",
     },
     {
         icon: webIcons.user,
-        value: "102",
+        value: 102,
         text: "Happy Clients",
     }
 ]

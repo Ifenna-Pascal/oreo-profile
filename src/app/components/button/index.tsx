@@ -39,6 +39,7 @@ const buttonVariants = cva(
 
 export const Button = ({text, variant, spacing, size, ...props}: ButtonProps) => {
   return (
-    <button className={buttonVariants({ variant, spacing, size})} {...props}>{text}</button>
+    <button
+    className={buttonVariants({ variant, spacing, size})} {...props}>{text}</button>
   )
 }

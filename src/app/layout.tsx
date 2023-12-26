@@ -5,6 +5,8 @@ import { TopNav } from './components'
 import { Footer } from './components/footer/footer'
 import BottomNav from './components/nav/bottomNav'
 import { poppins } from '@src/util/font'
+import { AnimatePresence } from 'framer-motion'
+import LayoutWraper from '@src/layoutWraper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +25,9 @@ export default function RootLayout({
       <body className={poppins.className}>
         <TopNav />
         <BottomNav />
-        {children}
+        <LayoutWraper>
+          {children}
+        </LayoutWraper>
         <Footer />
       </body>
     </html>
