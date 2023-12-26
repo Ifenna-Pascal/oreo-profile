@@ -1,33 +1,65 @@
-import React from 'react'
-import { Department, Heading, HeroHeader } from '../components'
+'use client'
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import React, { useEffect } from 'react'
+import {Heading, HeroHeader } from '../components'
 import { poppins } from '@src/util/font'
 import Image from 'next/image'
 import { images } from '@src/assets'
 import { Choice } from '../(public)'
-import { depts } from '@src/__mockdata__'
+import Department from "../components/card/department";
+import { services } from "@src/__mockdata__/results";
 
 const About = () => {
+  const boxVariant = {
+    visible: { opacity: 1, y:0, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, y:100 }
+  };
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
     <div>
         <HeroHeader header1='About' image="about-bg" header2='Jenepey' />  
         <div className='py-16 flex px-5 md:px-0  justify-between flex-col md:flex-row md:centered-main-container items-center'>
           <div className='basis-[50%] '>
-          <Heading title1='Welcome To' title2='Jeenpey' content='Quick Description text here...' />
-          <p  className={`${poppins.className} text-gray-400 text-[16px] w-[400px] py-3 tracking-wide`}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-           been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
-          </p>
+          <Heading title1='About' title2='Jenpeey' content='who we are & what we offer' />
+          <motion.p 
+          className={`${poppins.className} text-gray-400 text-[14px]  md:w-[520px] py-1 tracking-wide`}>
+            Welcome to Jenpeey Diagnostic Services, where our commitment is to redefine the landscape of health diagnostic services. 
+            Founded with a vision to revolutionize the industry, we pride ourselves on seamlessly integrating cutting-edge technology with unwavering human 
+            compassion, setting a new standard in service delivery.
+            <br />
+            <br />
+            At Jenpeey Diagnostic Services, we understand the significance of accurate and timely diagnostic information in healthcare decision-making. That's why we have meticulously crafted an environment that fosters innovation,
+             leveraging the latest advancements in medical technology to ensure precision and reliability in our diagnostic offerings.
+             <br /> <br />
+             Our dedicated team of skilled professionals, comprising experienced medical practitioners and compassionate support staff, is at the heart of our commitment to delivering unparalleled diagnostic services. Beyond state-of-the-art equipment and technology, it's our human touch that distinguishes us. We prioritize patient comfort, empathy, and understanding, creating an atmosphere 
+             where individuals feel cared for and supported throughout their diagnostic journey.
+          </motion.p>
           </div>
-          <div className='flex items-end py-8 justify-center basis-[50%]'>
+          <motion.div
+           ref={ref}
+           variants={boxVariant}
+            initial="hidden"
+            animate={control}
+           transition={{ type: "linear" }}
+          className='flex items-end py-8 justify-center basis-[50%]'>
               <Image src={images.aboutImg} alt='about-us' height={300} width={470} className='h-[300px] rounded-[10px] w-[470px]' />
-          </div>
+          </motion.div>
         </div>
         <Choice />
         <div className='centered-main-container px-5 md:px-0 py-16'>
-          <Heading title1='Most' title2='Popular Services' content='Quick Description text here...' />
+          <Heading title1='Most' title2='Popular Services' content='what we do best...' />
         <div className='py-6 centered-main-container grid grid-col gap-y-8 lg:grid-cols-3 md:gap-8'>      
-          {depts.map((team, index) => (
-            <Department key={index} img={team.img.src} name={'CARDIOLOGY'} position={'How all this mistaken al idea of denouncing pleasure praisings pain'} />
+          {services.map((service, index) => (
+            <Department key={index} img={service.img.src} name={service.name} position={service.value.slice(0,100)} />
           ))}
         </div>
         </div>

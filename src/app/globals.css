@@ -65,9 +65,9 @@ body {
   }
 
   .hero-bg {
-    background-image: url('../assets//images/bg-hero.jpg');
-    /* background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../assets//images/bg-hero.jpg'); */
-    background-position: center left;
+    /* background-image: url('../assets//images/doc5.jpg'); */
+    background:linear-gradient(120deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('../assets//images/doc5.jpg');
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     @media only screen and (max-width : 458px) {

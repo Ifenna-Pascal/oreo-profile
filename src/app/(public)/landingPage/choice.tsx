@@ -6,10 +6,13 @@ import { images } from '@src/assets'
 import { poppins } from '@src/util/font'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
-
-import Contact from './contact'
+import { useRouter } from "next/navigation";
 
 export function Choice() {
+  const router = useRouter()
+  const redirect = () => {
+    router.push('/contact')
+  } 
   const boxVariant = {
     visible: { opacity: 1, y:0, transition: { duration: 0.8} },
     hidden: { opacity: 0, y: 120 }
@@ -40,7 +43,7 @@ export function Choice() {
                  animate={control}
                  transition={{ type: "linear" }}
                 className={`${poppins.className} md:w-[500px] text-[28px] md:text-[34px] text-[#b4b4b5] md:py-2`}>
-                      Our goal is to make sure with advances in technology 
+                      Our goal is provide adequate health care.
                 </motion.h1>
                 <motion.p 
                 ref={ref}
@@ -49,10 +52,10 @@ export function Choice() {
                 animate={control}
                 transition={{ type: "linear" }}
                 className={`text-[#b4b4b5] ${poppins.className} text-[15px] leading-[24px] mb-4 lg:py-0  pt-3 md:w-[500px]`}>
-                 Professional dental clinic 32roDent offers the whole range of dentistry services: treatment of caries, gum diseases, tooth whitening,
-                 implantation, dentures (crowns installation), surgery, correction (braces) etc.
+                 Whether you're seeking routine check-ups, specialized diagnostics, or preventive screenings, Jenpeey Diagnostic Services is your trusted partner in health. Join us on a journey where technology meets compassion,
+                  and let's redefine the future of health diagnostics together. Your well-being is our priority.
                 </motion.p>
-                <Button text='More about practice' variant={'tint'} size={'medium'} />
+                <Button onClick={redirect} text='Contact Us' variant={'tint'} size={'medium'} />
             </div>
             <motion.div
                 ref={ref}

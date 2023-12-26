@@ -29,7 +29,7 @@ export function Footer() {
         The relentless service of Hospitals in the past 25 years taken health care to the most modern levels in the region catering to urban & rural.
         </p>
        </div>
-       <div className='flex-1 mt-8 '>
+       <div className='flex-1 mt-8 md:mt-0 '>
        <h1 className={`text-primary-300 pb-4 block md:hidden text-[16px] flex-1 ${poppins.className}`}>Useful Links</h1>
         <div className='flex'>
         <ul className='basis-[42%]'>
@@ -72,13 +72,13 @@ export function Footer() {
         </ul>
         </div>
       </div>
-       <div className='flex-1 mt-8 flex flex-col'>
+       <div className='flex-1 md:mt-0 mt-8 flex flex-col'>
        <h1 className={`text-primary-300 pb-4 block md:hidden text-[16px] flex-1 ${poppins.className}`}>Contact Details</h1>
          <div className='pb-5 flex'>
           {webIcons.venue}
           <span className={`text-gray-500 w-[220px] ml-3 -mt-1 ${poppins.className} text-[13px]`}>
-            121, Park Drive, Varick Str
-            New York, NY 10012, USA
+          #1 Otolo Street, Federal Housing Estate, Trans-Ekulu Enugu
+
           </span>
         </div>
         <div className='pb-5 flex'>

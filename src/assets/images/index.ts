@@ -10,6 +10,7 @@ import dept2 from './dept2.jpg';
 import dept3 from './dept3.jpg';
 import dept4 from './dept4.jpg';
 import dept5 from './dept5.jpg';
+import checkUp from './checkup.jpg';
 import support1 from './support.png';
 import support2 from './support2.png'
 import map from './map.jpg'
@@ -26,6 +27,7 @@ export const images = {
     team3,
     team4,
     dept1,
+    checkUp,
     dept2,
     dept3,
     dept4,

@@ -11,8 +11,8 @@ const buttonVariants = cva(
   {
     variants: {
      variant: {
-      tint: 'bg-secondary-100 border-none text-white',
-      outlined: 'border-secondary-100 border bg-transparent text-gray-600',
+      tint: 'bg-secondary-100 border-none hover:ml-2 hover:mr-2  duration-300 text-white',
+      outlined: 'border-secondary-100 hover:bg-secondary-100 hover:border-none border hover:text-white duration-300 bg-transparent text-gray-600',
       outlined_text: 'border-secondary-100 border bg-transparent text-secondary-100',
       default: 'border-none'
      },

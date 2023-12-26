@@ -10,7 +10,7 @@ import { images } from '@src/assets'
 const Contact = () => {
   return (
     <div>
-        <HeroHeader header1='Jeenpey' header2='Contact Us' image='contact-bg' />  
+        <HeroHeader header1='Jenpeey' header2='Contact Us' image='contact-bg' />  
         <div className='centered-main-container px-5 md:px-0  py-16'>
           <Heading title1='Get Touch' title2='With Us' content='Quick Description text here...' />
           <div className='grid grid-cols-1 lg:grid-cols-5 mt-8 gap-x-6 justify-between'>
