@@ -1,6 +1,6 @@
-import { results } from '@src/__mockdata__'
 import React from 'react'
 import Results from './results'
+import { results } from '@src/__mockdata__/results'
 
 const Numbering = () => {
   return (

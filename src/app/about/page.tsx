@@ -6,9 +6,9 @@ import {Heading, HeroHeader } from '../components'
 import { poppins } from '@src/util/font'
 import Image from 'next/image'
 import { images } from '@src/assets'
-import { Choice } from '../(public)'
 import Department from "../components/card/department";
 import { services } from "@src/__mockdata__/results";
+import ChoicesAlt from "../components/choices";
 
 const About = () => {
   const boxVariant = {
@@ -37,10 +37,10 @@ const About = () => {
             compassion, setting a new standard in service delivery.
             <br />
             <br />
-            At Jenpeey Diagnostic Services, we understand the significance of accurate and timely diagnostic information in healthcare decision-making. That's why we have meticulously crafted an environment that fosters innovation,
+            At Jenpeey Diagnostic Services, we understand the significance of accurate and timely diagnostic information in healthcare decision-making. That&apos;s why we have meticulously crafted an environment that fosters innovation,
              leveraging the latest advancements in medical technology to ensure precision and reliability in our diagnostic offerings.
              <br /> <br />
-             Our dedicated team of skilled professionals, comprising experienced medical practitioners and compassionate support staff, is at the heart of our commitment to delivering unparalleled diagnostic services. Beyond state-of-the-art equipment and technology, it's our human touch that distinguishes us. We prioritize patient comfort, empathy, and understanding, creating an atmosphere 
+             Our dedicated team of skilled professionals, comprising experienced medical practitioners and compassionate support staff, is at the heart of our commitment to delivering unparalleled diagnostic services. Beyond state-of-the-art equipment and technology, it&apos;s our human touch that distinguishes us. We prioritize patient comfort, empathy, and understanding, creating an atmosphere 
              where individuals feel cared for and supported throughout their diagnostic journey.
           </motion.p>
           </div>
@@ -54,7 +54,7 @@ const About = () => {
               <Image src={images.aboutImg} alt='about-us' height={300} width={470} className='h-[300px] rounded-[10px] w-[470px]' />
           </motion.div>
         </div>
-        <Choice />
+        <ChoicesAlt />
         <div className='centered-main-container px-5 md:px-0 py-16'>
           <Heading title1='Most' title2='Popular Services' content='what we do best...' />
         <div className='py-6 centered-main-container grid grid-col gap-y-8 lg:grid-cols-3 md:gap-8'>      

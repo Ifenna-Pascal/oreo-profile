@@ -35,7 +35,7 @@ export function Choice() {
 <div className='bg-[#2d3035] px-5 md:px-0 w-full py-16 md:pb-16 pb-20'>
         <div className='w-full centered-main-container flex md:flex-row flex-col items-center justify-between'>
             <div className='flex mb-8 md:mb-0 flex-col'>
-                <Heading title1='Why' title2='Choose Us'  content='Quick Description text here...' />
+                <Heading color="text-[#b4b4b5]" title1='Why' title2='Choose Us'  content='what makes us ' />
                 <motion.h1 
                  ref={ref}
                  variants={headerVariant}
@@ -52,8 +52,8 @@ export function Choice() {
                 animate={control}
                 transition={{ type: "linear" }}
                 className={`text-[#b4b4b5] ${poppins.className} text-[15px] leading-[24px] mb-4 lg:py-0  pt-3 md:w-[500px]`}>
-                 Whether you're seeking routine check-ups, specialized diagnostics, or preventive screenings, Jenpeey Diagnostic Services is your trusted partner in health. Join us on a journey where technology meets compassion,
-                  and let's redefine the future of health diagnostics together. Your well-being is our priority.
+                 Whether you&apos;re seeking routine check-ups, specialized diagnostics, or preventive screenings, Jenpeey Diagnostic Services is your trusted partner in health. Join us on a journey where technology meets compassion,
+                  and let&apos;s redefine the future of health diagnostics together. Your well-being is our priority.
                 </motion.p>
                 <Button onClick={redirect} text='Contact Us' variant={'tint'} size={'medium'} />
             </div>

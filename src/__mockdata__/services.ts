@@ -1,4 +1,5 @@
 import { icons } from "@src/assets";
+import webIcons from "@src/util/icons";
 
 export  const services = [
     {
@@ -43,4 +44,32 @@ export  const services = [
         href: "#"
     },
 
+]
+
+export const choices = [
+    {
+        icon: webIcons.award,
+        header: "Advanced Technology",
+        content: "We invest in the latest diagnostic equipment to provide accurate and comprehensive results"
+    },
+    {
+        icon: webIcons.ancr,
+        header: "Expertise",
+        content: "Our team consists of highly qualified and experienced medical professionals committed to excellence in diagnostics. "
+    },
+    {
+        icon: webIcons.care,
+        header: "Compassionate Care",
+        content: "Beyond technology, we understand the importance of human connection and ensure every patient feels valued and supported."
+    },
+    {
+        icon: webIcons.ancr,
+        header: "Efficiency",
+        content: "We strive for efficiency in service delivery, aiming to provide timely results that empower informed healthcare decisions.",
+    },
+    {
+        icon: webIcons.ancr,
+        header: "Comprehensive Services",
+        content: "From routine screenings to specialized diagnostic procedures, we offer a wide range of services to cater to diverse healthcare needs."
+    }
 ]

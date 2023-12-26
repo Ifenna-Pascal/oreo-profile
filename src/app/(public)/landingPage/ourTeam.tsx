@@ -1,4 +1,4 @@
-import { teams } from '@src/__mockdata__'
+import { teams } from '@src/__mockdata__/results'
 import { Heading, Team } from '@src/app/components'
 import React from 'react'
 

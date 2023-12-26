@@ -1,8 +1,8 @@
 import React from 'react'
 import {  HeroHeader } from '../components'
-import { depts } from '@src/__mockdata__'
 import { Choice } from '../(public)'
 import Department from '../components/card/department'
+import { depts } from '@src/__mockdata__/results'
 
 const Departments = () => {
   return (

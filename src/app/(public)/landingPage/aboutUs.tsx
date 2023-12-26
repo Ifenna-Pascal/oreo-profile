@@ -52,7 +52,7 @@ export const AboutUs = () => {
             Founded with a vision to revolutionize the industry, we pride ourselves on seamlessly integrating cutting-edge technology with unwavering human 
             compassion, setting a new standard in service delivery.
             <br /> <br />
-            At Jenpeey Diagnostic Services, we understand the significance of accurate and timely diagnostic information in healthcare decision-making. That's why we have meticulously crafted an environment that fosters innovation, 
+            At Jenpeey Diagnostic Services, we understand the significance of accurate and timely diagnostic information in healthcare decision-making. That&apos;s why we have meticulously crafted an environment that fosters innovation, 
             leveraging the latest advancements in medical technology to ensure precision and reliability in our diagnostic offerings.
                 </p>
 

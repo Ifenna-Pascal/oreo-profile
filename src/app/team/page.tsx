@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading, HeroHeader, Team } from '../components'
-import { teams } from '@src/__mockdata__'
+import { teams } from '@src/__mockdata__/results'
 
 
 const OurTeam = () => {
