@@ -87,7 +87,7 @@ export const services = [
     {
         img: images.dept1,
         name: "Laboratory Services",
-        value: 'At Jenpeey Diagnostic Services, our state-of-the-art laboratory is equipped with cutting-edge technology and staffed by experienced professionals to offer a comprehensive range of diagnostic tests. From routine blood tests to specialized screenings, our laboratory services prioritize accuracy, efficiency, and timely results to aid in effective healthcare decision-making.        '
+        value: 'At Jenpeey Diagnostic Services, our state-of-the-art laboratory is equipped with cutting-edge technology and staffed by experienced professionals to offer a comprehensive range of diagnostic tests. From routine blood tests to specialized screenings, our laboratory services prioritize accuracy, efficiency, and timely results to aid in effective healthcare decision-making.'
     },
 
     {   

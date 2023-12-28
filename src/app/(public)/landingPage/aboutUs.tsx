@@ -29,7 +29,7 @@ export const AboutUs = () => {
   } 
   return (
     <div className='pt-28 md:pt-32 pb-16 px-5 centered-main-container'>
-        <Heading title1='About' title2='Us' content='Quick Description about us' />
+        <Heading title1='About' title2='Us' content='Quick description about us' />
         <div className='flex md:flex-row flex-col items-center py-4  md:py-6'>
         <motion.div 
                 ref={ref}
@@ -38,7 +38,7 @@ export const AboutUs = () => {
                  animate={control}
                 transition={{ type: "linear" }}
                 className='flex items-end cursor-pointer md:basis-[50%]'>
-              <Image src={images.aboutImg} alt='about-us' height={300} width={440} className='h-[300px] rounded-[10px] w-[440px]' />
+              <Image src={images.aboutImg} alt='about-us' height={300} width={440} className='hmd:-[300px] rounded-[10px] md:w-[440px]' />
           </motion.div>
                 <motion.div 
                 ref={ref}

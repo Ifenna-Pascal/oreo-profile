@@ -66,7 +66,15 @@ const Contact = () => {
           </div>
           </div>
         </div>
-        <Image src={images.map} width={100} height={250} alt='map-images' className='w-full object-cover h-[250px]' />
+        {/* <Image src={images.map} width={100} height={250} alt='map-images' className='w-full object-cover h-[250px]' /> */}
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15857.324627955253!2d7.487105539550793!3d6.4796758999999975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a3e01eafb84f%3A0x2f24b7288fa2520f!2sSt.%20Philip&#39;s%20Anglican%20Church%20Federal%20Housing%2C%20Trans-Ekulu%2C%20Enugu.!5e0!3m2!1sen!2sng!4v1703768510355!5m2!1sen!2sng"
+        height="450"
+        className='w-full'
+        style={{ border: "0" }}
+        allowFullScreen={true}
+        loading="lazy"
+      ></iframe>
         <div className='centered-main-container md:px-0 px-5 py-16'>
         <Heading title1='Our' title2='Partners' content='Quick Description text here...' />
         <div className='flex py-4 md:items-center flex-col md:flex-row md:flex-wrap gap-x-6'>

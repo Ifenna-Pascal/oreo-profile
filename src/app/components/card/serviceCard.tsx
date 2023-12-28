@@ -39,7 +39,7 @@ export const ServiceCard = ({ title, content, img, href }: IProps) => {
         <Image src={img} alt="service_img" width={60} height={60}  className='bg-blend-lighten' />
         </div>
         <h1 className={`${poppins.className} font-bold text-[17px] text-primary-300 mb-1`}>{title}</h1>
-        <span className={`py-3 text-[14px] text-gray-500 w-[350px] ${poppins.className} `}>{content}</span>
+        <span className={`py-3 text-[14px] text-center md:text-left text-gray-500 w-[350px] ${poppins.className} `}>{content.slice(0,100)}...</span>
         <Link href={href} className={`${poppins.className} text-secondary-50 font-400 text-[14px] pt-2`}> View More </Link>
     </motion.div>
   )

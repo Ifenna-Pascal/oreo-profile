@@ -27,11 +27,11 @@ const About = () => {
   return (
     <div>
         <HeroHeader header1='About' image="about-bg" header2='Jenepey' />  
-        <div className='py-16 flex px-5 md:px-0  justify-between flex-col md:flex-row md:centered-main-container items-center'>
-          <div className='basis-[50%] '>
+        <div className='py-16 flex px-5 md:px-0  justify-between flex-col md:flex-row md:centered-main-container imd:tems-center'>
+          <div className='md:basis-[50%] '>
           <Heading title1='About' title2='Jenpeey' content='who we are & what we offer' />
-          <motion.p 
-          className={`${poppins.className} text-gray-400 text-[14px]  md:w-[520px] py-1 tracking-wide`}>
+          <motion.span
+          className={`${poppins.className} text-gray-400 text-[12px] md:text-[14px] w-full  md:w-[520px] py-1 md:tracking-wide`}>
             Welcome to Jenpeey Diagnostic Services, where our commitment is to redefine the landscape of health diagnostic services. 
             Founded with a vision to revolutionize the industry, we pride ourselves on seamlessly integrating cutting-edge technology with unwavering human 
             compassion, setting a new standard in service delivery.
@@ -42,7 +42,7 @@ const About = () => {
              <br /> <br />
              Our dedicated team of skilled professionals, comprising experienced medical practitioners and compassionate support staff, is at the heart of our commitment to delivering unparalleled diagnostic services. Beyond state-of-the-art equipment and technology, it&apos;s our human touch that distinguishes us. We prioritize patient comfort, empathy, and understanding, creating an atmosphere 
              where individuals feel cared for and supported throughout their diagnostic journey.
-          </motion.p>
+          </motion.span>
           </div>
           <motion.div
            ref={ref}
@@ -50,12 +50,12 @@ const About = () => {
             initial="hidden"
             animate={control}
            transition={{ type: "linear" }}
-          className='flex items-end py-8 justify-center basis-[50%]'>
-              <Image src={images.aboutImg} alt='about-us' height={300} width={470} className='h-[300px] rounded-[10px] w-[470px]' />
+          className='flex items-end py-8 justify-center md:basis-[50%]'>
+              <Image src={images.aboutImg} alt='about-us' height={300} width={470} className='md:h-[300px] rounded-[10px] md:w-[470px]' />
           </motion.div>
         </div>
-        <ChoicesAlt />
-        <div className='centered-main-container px-5 md:px-0 py-16'>
+        <ChoicesAlt />  
+        <div className='md:centered-main-container px-5  md:px-0 py-16'>
           <Heading title1='Most' title2='Popular Services' content='what we do best...' />
         <div className='py-6 centered-main-container grid grid-col gap-y-8 lg:grid-cols-3 md:gap-8'>      
           {services.map((service, index) => (
