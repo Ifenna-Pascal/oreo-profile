@@ -4,6 +4,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
   text:string;
+  children?: React.ReactNode
 }
 
 const buttonVariants = cva(
@@ -37,9 +38,11 @@ const buttonVariants = cva(
 
 
 
-export const Button = ({text, variant, spacing, size, ...props}: ButtonProps) => {
+export const Button = ({text, variant, children, spacing, size, ...props}: ButtonProps) => {
   return (
     <button
-    className={buttonVariants({ variant, spacing, size})} {...props}>{text}</button>
+    className={buttonVariants({ variant, spacing, size})} type='submit' {...props}>
+    {children ? children : text}
+    </button>
   )
 }

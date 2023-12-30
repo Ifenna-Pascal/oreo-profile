@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div>
         <HeroHeader header1='About' image="about-bg" header2='Jenepey' />  
-        <div className='py-16 flex px-5 md:px-0  justify-between flex-col md:flex-row md:centered-main-container imd:tems-center'>
+        <div className='py-16 flex px-5 md:px-0  justify-between flex-col md:flex-row md:centered-main-container md:items-center'>
           <div className='md:basis-[50%] '>
           <Heading title1='About' title2='Jenpeey' content='who we are & what we offer' />
           <motion.span

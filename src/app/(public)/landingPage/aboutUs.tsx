@@ -28,7 +28,7 @@ export const AboutUs = () => {
     router.push('/about')
   } 
   return (
-    <div className='pt-28 md:pt-32 pb-16 px-5 centered-main-container'>
+    <div className='pt-56 md:pt-32 pb-16 px-5 centered-main-container'>
         <Heading title1='About' title2='Us' content='Quick description about us' />
         <div className='flex md:flex-row flex-col items-center py-4  md:py-6'>
         <motion.div 

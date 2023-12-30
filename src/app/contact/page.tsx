@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Button, Heading, HeroHeader, Input } from '../components'
 import { TextArea } from '../components/input/input'
@@ -6,8 +7,55 @@ import webIcons from '@src/util/icons'
 import Link from 'next/link'
 import Image from 'next/image'
 import { images } from '@src/assets'
+import { useFormik } from 'formik';
+import * as yup from 'yup'
 
 const Contact = () => {
+  interface IContact {
+    name: string;
+    mobile: string;
+    message: string;
+    email: string;
+  }
+
+  const initialContact = {
+    name: '',
+    mobile: '',
+    message: '',
+    email: '',
+  }
+
+  const contactSchema = yup.object().shape({
+    name: yup.string().required('name field is required'),
+    mobile: yup.string().required('mobile number field is required'),
+    message: yup.string().required('message field is required'),
+    email: yup.string().email().required('email field is required'),
+  })
+
+  const {
+    values,
+    errors,
+    handleChange,
+    resetForm,
+    handleBlur,
+    touched,
+    handleSubmit,
+  } = useFormik<IContact>({
+    initialValues: initialContact,
+    validationSchema: contactSchema,
+    onSubmit: () => {
+      onSubmit();
+    } 
+  });
+
+  const onSubmit = async() => {
+    try {
+      console.log(values)
+    } catch (error) {
+      
+    }
+  }
+
   return (
     <div>
         <HeroHeader header1='Jenpeey' header2='Contact Us' image='contact-bg' />  
@@ -16,13 +64,14 @@ const Contact = () => {
           <div className='grid grid-cols-1 lg:grid-cols-5 mt-8 gap-x-6 justify-between'>
           <div className='md:col-span-3'>
           <p className={`text-[16px] mb-4  pb-3 font-[400] tracking-[0.4px] font-300 text-gray-500  ${poppins.className} `}>Make Appointment</p>
-          <form className='grid gap-y-6 grid-cols-1 md:grid-cols-2 md:gap-x-6'>
-            <Input label='Enter Name' className='w-full md:col-span-1 col-span-2' />
-            <Input label='Enter Email'  className='w-full md:col-span-1 col-span-2' />
-            <Input label='Enter Phone'  className='w-full md:col-span-1 col-span-2' />
-            <Input label='Subject'  className='w-full md:col-span-1 col-span-2' />
+          <form onSubmit={handleSubmit} className='grid gap-y-6 grid-cols-1 md:grid-cols-2 md:gap-x-6'>
+            <Input  error={errors.name ? errors.name : ''} touched={touched.name} value={values.name} onBlur={handleBlur} onChange={handleChange} name='name' label='Enter Name' className='w-full md:col-span-1 col-span-2' />
+            <Input  error={errors.mobile ? errors.mobile : ''} touched={touched.mobile} value={values.mobile} onBlur={handleBlur} onChange={handleChange} name='mobile' label='Enter Phone'  className='w-full md:col-span-1 col-span-2' />
             <div className='col-span-2'>
-              <TextArea label='Your Message'/>
+            <Input  error={errors.email ? errors.email : ''} touched={touched.email} value={values.email} onBlur={handleBlur} onChange={handleChange} name='email' label='Enter Email' type='email'  className='w-full md:col-span-1 col-span-2' />
+            </div>
+            <div className='col-span-2'>
+              <TextArea  error={errors.message ? errors.message : ''} touched={touched.message} value={values.message} onBlur={handleBlur} onChange={handleChange} name='message' label='Your Message'/>
             </div>
             <Button text='Submit' variant={'tint'} size={'small'} />
           </form>

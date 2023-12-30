@@ -7,6 +7,7 @@ import BottomNav from './components/nav/bottomNav'
 import { poppins } from '@src/util/font'
 import { AnimatePresence } from 'framer-motion'
 import LayoutWraper from '@src/layoutWraper'
+import { ToastContainer } from 'react-toastify';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body className={poppins.className}>
+      <ToastContainer
+        position="top-right"
+        autoClose={20000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
         <TopNav />
         <BottomNav />
         <LayoutWraper>
