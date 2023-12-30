@@ -69,33 +69,33 @@ export function HeroContact() {
   }
 
   return (
-    <div className='flex flex-col p-6 absolute -bottom-[240px] md:-bottom-[100px]  md:mb-0 shadow-md md:left-[13%] bg-white max-w-[94%] left-[3%] w-full md:centered-main-container rounded-[8px]  min-h-[186px]'>
+    <div className='flex flex-col p-6 absolute -bottom-[280px] md:-bottom-[100px]  md:mb-0 shadow-md md:left-[13%] bg-white max-w-[94%] left-[3%] w-full md:centered-main-container rounded-[8px]  min-h-[186px]'>
      <p className={`text-[16px] mb-4  font-[400] tracking-[0.4px] font-300 text-gray-600  ${poppins.className} `}>Make Appointment</p>
     <form onSubmit={handleSubmit} className='md:grid flex flex-col grid-cols-1 md:grid-cols-3 gap-y-3 md:gap-x-6'>
         <Input error={errors.name ? errors.name : ''} touched={touched.name} value={values.name} onBlur={handleBlur} onChange={handleChange} name='name' label='Enter Name' className='col-span-1 md:col-span-1' />
         <SelectInput error={errors.department ? errors.department : ''}  touched={touched.department}  value={values.department} onBlur={handleBlur} onChange={handleChange} name='department'  label='Enter Department'>
-        <option value="" disabled selected>Select A Department</option>
+        <option  className='text-gray-600'  value="" disabled selected>Select A Department</option>
       
-          <option value="laboratory Service">Laboratory Service</option>
-          <option value="Blood Banking">Blood Banking</option>
-          <option value="Radiology Services"> Radiology Services</option>
-          <option value="Inpatient Services">Inpatient/Consultation Services</option>
+          <option  className='text-gray-600' value="laboratory Service">Laboratory Service</option>
+          <option  className='text-gray-600' value="Blood Banking">Blood Banking</option>
+          <option  className='text-gray-600' value="Radiology Services"> Radiology Services</option>
+          <option  className='text-gray-600' value="Inpatient Services">Inpatient/Consultation Services</option>
         </SelectInput>
         <Input  error={errors.mobile ? errors.mobile : ''} touched={touched.mobile} value={values.mobile} onBlur={handleBlur} onChange={handleChange} name='mobile'  label='Enter Mobile' />
        
         <SelectInput  error={errors.doctor ? errors.doctor : ''}  touched={touched.doctor}  value={values.doctor} onBlur={handleBlur} onChange={handleChange} name='doctor'  label='Enter doctor'>
-        <option value="" disabled selected>Select A Doctor</option>
-          <option value="laboratory Service">Laboratory Service</option>
-          <option value="Blood Banking">Blood Banking</option>
-          <option value="Radiology Services"> Radiology Services</option>
-          <option value="Inpatient Services">Inpatient/Consultation Services</option>
+        <option  className='text-gray-600' value="" disabled selected>Select A Doctor</option>
+          <option  className='text-gray-600' value="laboratory Service">Laboratory Service</option>
+          <option  className='text-gray-600' value="Blood Banking">Blood Banking</option>
+          <option  className='text-gray-600' value="Radiology Services"> Radiology Services</option>
+          <option  className='text-gray-600' value="Inpatient Services">Inpatient/Consultation Services</option>
         </SelectInput>
         <SelectInput   error={errors.service   ? errors.service  : ''}  touched={touched.service } value={values.service} onBlur={handleBlur} onChange={handleChange} name='service'  label='Enter Service'>
-        <option value="" disabled selected>Select A Service</option>
-          <option value="laboratory Service">Laboratory Service</option>
-          <option value="Blood Banking">Blood Banking</option>
-          <option value="Radiology Services"> Radiology Services</option>
-          <option value="Inpatient Services">Inpatient/Consultation Services</option>
+        <option  className='text-gray-600' value="" disabled selected>Select A Service</option>
+          <option  className='text-gray-600' value="laboratory Service">Laboratory Service</option>
+          <option  className='text-gray-600' value="Blood Banking">Blood Banking</option>
+          <option  className='text-gray-600' value="Radiology Services"> Radiology Services</option>
+          <option  className='text-gray-600' value="Inpatient Services">Inpatient/Consultation Services</option>
         </SelectInput>
         <div className='col-span-2 md:col-span-1'>
         <Button text='View More ' variant={'tint'} size={'fill'}>
