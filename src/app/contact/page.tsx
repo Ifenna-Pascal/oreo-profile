@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Heading, HeroHeader, Input } from '../components'
 import { TextArea } from '../components/input/input'
 import { poppins } from '@src/util/font'
@@ -9,8 +9,12 @@ import Image from 'next/image'
 import { images } from '@src/assets'
 import { useFormik } from 'formik';
 import * as yup from 'yup'
+import { toast } from 'react-toastify';
+import { addContact } from '@src/db/method'
+import ButtonLoader from '@src/util/loader'
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
   interface IContact {
     name: string;
     mobile: string;
@@ -50,9 +54,17 @@ const Contact = () => {
 
   const onSubmit = async() => {
     try {
+      setIsLoading(true);
       console.log(values)
+      const result = await addContact(values)
+      console.log(result, "res8lt")
+      if(result) {
+        setIsLoading(false)
+        toast.success(`contact saved successfuly`)
+      }
+      resetForm()
     } catch (error) {
-      
+      setIsLoading(false);
     }
   }
 
@@ -60,20 +72,22 @@ const Contact = () => {
     <div>
         <HeroHeader header1='Jenpeey' header2='Contact Us' image='contact-bg' />  
         <div className='centered-main-container px-5 md:px-0  py-16'>
-          <Heading title1='Get Touch' title2='With Us' content='Quick Description text here...' />
+          <Heading title1='Get Touch' title2='With Us' content='leave us a message...' />
           <div className='grid grid-cols-1 lg:grid-cols-5 mt-8 gap-x-6 justify-between'>
           <div className='md:col-span-3'>
-          <p className={`text-[16px] mb-4  pb-3 font-[400] tracking-[0.4px] font-300 text-gray-500  ${poppins.className} `}>Make Appointment</p>
-          <form onSubmit={handleSubmit} className='grid gap-y-6 grid-cols-1 md:grid-cols-2 md:gap-x-6'>
+          <p className={`text-[16px] mb-4  pb-3 font-[400] tracking-[0.4px] font-300 text-gray-500  ${poppins.className} `}>Leave us a message</p>
+          <form onSubmit={handleSubmit} className='md:grid flex flex-col gap-y-6 grid-cols-1 md:grid-cols-2 md:gap-x-6'>
             <Input  error={errors.name ? errors.name : ''} touched={touched.name} value={values.name} onBlur={handleBlur} onChange={handleChange} name='name' label='Enter Name' className='w-full md:col-span-1 col-span-2' />
             <Input  error={errors.mobile ? errors.mobile : ''} touched={touched.mobile} value={values.mobile} onBlur={handleBlur} onChange={handleChange} name='mobile' label='Enter Phone'  className='w-full md:col-span-1 col-span-2' />
             <div className='col-span-2'>
             <Input  error={errors.email ? errors.email : ''} touched={touched.email} value={values.email} onBlur={handleBlur} onChange={handleChange} name='email' label='Enter Email' type='email'  className='w-full md:col-span-1 col-span-2' />
             </div>
             <div className='col-span-2'>
-              <TextArea  error={errors.message ? errors.message : ''} touched={touched.message} value={values.message} onBlur={handleBlur} onChange={handleChange} name='message' label='Your Message'/>
+              <TextArea  error={errors.message ? errors.message : ''} touched={touched.message} value={values.message} onBlur={handleBlur} onChange={handleChange} name='message' label='Your Message' placeholder='Enter Messsage'/>
             </div>
-            <Button text='Submit' variant={'tint'} size={'small'} />
+            <Button text='Submit' variant={'tint'} size={'small'} >
+              {isLoading && <ButtonLoader />}
+            </Button>
           </form>
           </div>
           <div className='col-span-2 flex items-end justify-center'>

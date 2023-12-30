@@ -21,6 +21,13 @@ interface IBooking {
     service: string;
     doctor: string;
   }
+
+  interface IContact {
+    name: string;
+    mobile: string;
+    message: string;
+    email: string;
+  }
 const addBooking = async (arg: IBooking) => {
   const { name, mobile, department, service, doctor,} = arg;
   const result = await addDoc(colRef, {
@@ -33,7 +40,7 @@ const addBooking = async (arg: IBooking) => {
   return result;
 };
 
-const addContact = async (arg: Record<string,string>) => {
+const addContact = async (arg: IContact) => {
     const { name, mobile, message, email } = arg;
     const result = await addDoc(colRef2, {
       name,

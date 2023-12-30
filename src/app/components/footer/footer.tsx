@@ -7,10 +7,12 @@ import { Button, Input } from '..'
 export function Footer() {
     return (
       <footer className='relative  mt-12'>
-         <div className='lg:centered-main-container gap-x-5 absolute gap-y-3 md:gap-y-0   -top-20  md:-top-14 flex-col md:flex-row md:left-[12%] px-5 flex items-center justify-between bg-white shadow-lg py-6 md:py-0 min-h-[110px]  rounded-[8px] w-[92%] left-[4%] md:w-full'>
-         <Input label='Enter Name' className='w-full flex-1' />
+         <div className='lg:centered-main-container absolute gap-y-3 md:gap-y-0  -top-20  md:-top-14 flex-col md:flex-row md:left-[12%] px-5 flex items-center  bg-white shadow-lg py-6 md:py-0 min-h-[110px]  rounded-[8px] w-[92%] left-[4%] md:w-full'>
+          <form className='w-full gap-x-5 items-center grid grid-cols-1 gap-y-4 md:grid-cols-3'>
+          <Input label='Enter Name' className='w-full' />
          <Input label='Enter Email' type='email' />
          <Button variant={'tint'} size={'fill'} text='Submit' />
+          </form>
          </div>
         <div className='w-full min-h-[350px] px-5 md:px-0 flex justify-center flex-col bg-gray-200 pt-[150px] md:pt-[100px] pb-[28px]'>
       <div className='md:flex hidden items-center w-full pb-6 justify-between lg:centered-main-container'>

@@ -1,15 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import { TopNav } from './components'
 import { Footer } from './components/footer/footer'
 import BottomNav from './components/nav/bottomNav'
 import { poppins } from '@src/util/font'
-import { AnimatePresence } from 'framer-motion'
 import LayoutWraper from '@src/layoutWraper'
 import { ToastContainer } from 'react-toastify';
-
-const inter = Inter({ subsets: ['latin'] })
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

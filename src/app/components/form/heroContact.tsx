@@ -5,7 +5,7 @@ import { Button, Input } from '..'
 import { useFormik } from 'formik';
 import * as yup from 'yup'
 import { SelectInput } from '../input/input';
-import { addBooking, getCollectionData } from '@src/db/method';
+import { addBooking } from '@src/db/method';
 import ButtonLoader from '@src/util/loader';
 import { toast } from 'react-toastify';
 

@@ -72,7 +72,7 @@ export const TextArea = ({label, touched, error, className, ...props}: InputProp
           : 'border-gray-300'
       }  
       w-full border-gray-300 border-b px-4 py-2 focus:outline-none text-gray-100 placeholder:text-gray-100 text-[14px] focus:border-secondary-100 ${className} ${poppins.className}`}  {...props}
-    >{label}</textarea>
+    />
       <span className={`text-red-400 ml-2 -mt-2 text-[9px] ${poppins.className}`}>{error}</span>
    </div>
   )
