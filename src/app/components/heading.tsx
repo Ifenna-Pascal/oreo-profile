@@ -38,7 +38,7 @@ export const Heading = ({title1,title2, content, color}: IProps) => {
               initial="hidden"
               animate={control}
               transition={{ type: "linear" }}
-            className='w-[2px] h-[22px] mt-2 bg-primary-200'>
+            className='w-[3px] h-[22px] mt-2 bg-secondary-100'>
             </motion.div>
             <motion.div 
                 ref={ref}
@@ -47,7 +47,7 @@ export const Heading = ({title1,title2, content, color}: IProps) => {
                 animate={control}
                 transition={{ type: "linear" }}
                 className='flex flex-col ml-4'>
-                <h2 className={`text-primary-200 text-[24px] ${poppins.className}`}>{title1} <span className={color || 'text-gray-600'}>{title2}</span> </h2>
+                <h2 className={`text-secondary-100 text-[24px] font-semibold ${poppins.className}`}>{title1} <span className={color || 'text-gray-600'}>{title2}</span> </h2>
                 <p className={`text-[14px] mb-4  font-[400] tracking-[0.4px]  font-300 ${color || 'text-gray-500 '} ${poppins.className} `}>{content}</p>
             </motion.div>
         </div>

@@ -21,9 +21,9 @@ const config: Config = {
         },
         secondary: {
           // orange color
-          50: '#f2a687',
-          100: '#fc7545',
-          200: '#a890d3'
+          50: '#86bb46',
+          100: '#49b241',
+          200: '#8dc3f8'
         },
         gray: {
           100: '#dfe0e2',

@@ -55,7 +55,7 @@ export function Choice() {
                  Whether you&apos;re seeking routine check-ups, specialized diagnostics, or preventive screenings, Jenpeey Diagnostic Services is your trusted partner in health. Join us on a journey where technology meets compassion,
                   and let&apos;s redefine the future of health diagnostics together. Your well-being is our priority.
                 </motion.p>
-                <Button onClick={redirect} text='Contact Us' variant={'tint'} size={'medium'} />
+                <Button onClick={redirect} text='Contact Us' variant={'tint'} size={'medium'} className="rounded-none"/>
             </div>
             <motion.div
                 ref={ref}
@@ -64,7 +64,7 @@ export function Choice() {
                 animate={control}
                 transition={{ type: "linear" }}
             >
-            <Image src={images.choice} width={450} height={600} alt='chice image' />
+            <Image src={images.choice} width={460} height={600} alt='chice image' />
             </motion.div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 import logo from './logo.png';
-import about from './about-2.jpg';
+import about from './doc4.jpg';
 import team1 from './team1.png';
 import team2 from './team2.png';
 import team3 from './team3.png';

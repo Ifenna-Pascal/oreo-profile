@@ -10,6 +10,7 @@ import Department from "../components/card/department";
 import { services } from "@src/__mockdata__/results";
 import ChoicesAlt from "../components/choices";
 
+
 const About = () => {
   const boxVariant = {
     visible: { opacity: 1, y:0, transition: { duration: 0.8 } },
@@ -31,7 +32,7 @@ const About = () => {
           <div className='md:basis-[50%] '>
           <Heading title1='About' title2='Jenpeey' content='who we are & what we offer' />
           <motion.span
-          className={`${poppins.className} text-gray-400 text-[12px] md:text-[14px] w-full  md:w-[520px] py-1 md:tracking-wide`}>
+            className={`${poppins.className} text-gray-400 text-[12px] md:text-[14px] w-full  md:w-[520px] py-1 md:tracking-wide`}>
             Welcome to Jenpeey Diagnostic Services, where our commitment is to redefine the landscape of health diagnostic services. 
             Founded with a vision to revolutionize the industry, we pride ourselves on seamlessly integrating cutting-edge technology with unwavering human 
             compassion, setting a new standard in service delivery.
@@ -45,13 +46,13 @@ const About = () => {
           </motion.span>
           </div>
           <motion.div
-           ref={ref}
-           variants={boxVariant}
+            ref={ref}
+            variants={boxVariant}
             initial="hidden"
             animate={control}
-           transition={{ type: "linear" }}
-          className='flex items-end py-8 justify-center md:basis-[50%]'>
-              <Image src={images.aboutImg} alt='about-us' height={300} width={470} className='md:h-[300px] rounded-[10px] md:w-[470px]' />
+            transition={{ type: "linear" }}
+            className='flex items-end py-8 justify-center md:basis-[50%]'>
+              <Image src={images.aboutImg} alt='about-us' height={360} width={500} className='md:h-[360px] rounded-[10px] md:w-[500px]' />
           </motion.div>
         </div>
         <ChoicesAlt />  

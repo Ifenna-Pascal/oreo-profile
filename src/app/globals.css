@@ -21,6 +21,24 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+.swiper-button-next { 
+  color: #49b241 !important;
+  @media only screen and (max-width : 458px) {
+    color: transparent !important;
+   }  
+ }
+.swiper-button-prev { 
+    color: #49b241 !important;
+    @media only screen and (max-width : 458px) {
+      color: transparent !important;
+     }    
+}
+.swiper-pagination-bullet{
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #49b241 !important;
+}
+
 
 @layer components {
   .main-container {
@@ -28,7 +46,7 @@ body {
   }
   
   .centered-main-container {
-    max-width: 1140px;
+    max-width: 1200px;
     margin: 0 auto;
  /* Small Devices, Tablets */
  /* @media only screen and (min-width : 768px) {
@@ -66,13 +84,37 @@ body {
 
   .hero-bg {
     /* background-image: url('../assets//images/doc5.jpg'); */
-    background:linear-gradient(120deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('../assets//images/doc5.jpg');
+    background:linear-gradient(120deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../assets//images/doc5.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     @media only screen and (max-width : 458px) {
       background-position: left;
-      
+     }  
+  }
+
+  
+  .hero-bg-2 {
+    /* background-image: url('../assets//images/doc5.jpg'); */
+    background:linear-gradient(120deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../assets//images/checkup.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media only screen and (max-width : 458px) {
+      background-position: left;
+     }  
+  }
+
+
+    
+  .hero-bg-3 {
+    /* background-image: url('../assets//images/doc5.jpg'); */
+    background:linear-gradient(120deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../assets//images/doc3.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media only screen and (max-width : 458px) {
+      background-position: left;
      }  
   }
 
