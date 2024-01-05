@@ -41,7 +41,7 @@ export  function Hero() {
           scrollbar={{ draggable: true }}
         >
         <SwiperSlide>
-        <div className='min-h-[85vh] md:min-h-[70vh] relative flex items-center flex-col justify-center hero-bg-3'>
+        <div className='min-h-[78vh] md:min-h-[70vh] relative flex items-center flex-col justify-center hero-bg-3'>
         <div className='md:centered-main-container w-full '>
       
               <motion.div
